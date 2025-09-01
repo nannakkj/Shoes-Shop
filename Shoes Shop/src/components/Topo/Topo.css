@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+:root {
+    --primary-color: #fe0084;
+    --secindary-color: #f5deb3;
+    --tittle: #fff9e6;
+    --contrast: #fe8629;
+    --text-base: ##c5006c;
+    --cta: #c5006c;
+    --background: #1a1a1a;
+    --text-color: #fff;
+    --gradient1: linear-gradient(90deg, #e6007e, #6a1b9a);
+    --gradient2: linear-gradient(135deg, #ff3399, #4a148c);
+    --font-base:  Quicksand, sans-serif;
+    --font-tittle: Roboto Mono, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    color: var(--text-base);
+    font-family: var(--font-base);
+}
+
+img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 32px;
+    background: var(--gradient1);
+    color: var(--text-color);
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.btn:hover {
+    background: var(--gradient2);
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.anuncio{
+    background-color: var(--background);
+    color: var(--text-color);
+    text-align: center;
+    padding: 8px;
+    font-size: 30px;
+    white-space: nowrap;
+}
+
+.anuncio_conteudo{
+    display: inline-block;
+    overflow: hidden;
+}
+.anuncio_conteudo p{
+    display: inline-block;
+    animation: text_run 9s linear infinite;
+}
+
+.topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--text-color);
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
+.topo nav{
+    display: flex;
+    gap: 20px;
+}
+
+.topo nav a{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: var(--font-base);
+    position: relative;
+    transition: .3s ease;
+    color: black;
+}
+
+.topo nav a:after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--cta);
+    transition: width .3s ease;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 25px;
+}
+.topo nav a:hover{
+    color: var(--cta);
+}
+.topo nav a:hover::after{
+    width: 100%;
+}
+@keyframes text_run {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
